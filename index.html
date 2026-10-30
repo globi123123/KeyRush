@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KeyRush is a premium browser-based typing game with classic, zen, code, rush and quote modes." />
+    <meta name="theme-color" content="#111214" />
+    <title>KeyRush</title>
+    <script>
+      // Apply the saved theme before the first paint to avoid a flash.
+      try {
+        var saved = JSON.parse(localStorage.getItem('keyrush:settings') || '{}')
+        if (saved && saved.theme === 'light') document.documentElement.dataset.theme = 'light'
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>KeyRush needs JavaScript to run.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
