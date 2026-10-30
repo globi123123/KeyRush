@@ -1,5 +1,7 @@
 name: Deploy to GitHub Pages
 
+# Deploys on every push to main. It can also be started manually from the
+# Actions tab, e.g. to deploy from another branch.
 on:
   push:
     branches: [main]
